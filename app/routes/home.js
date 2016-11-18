@@ -5,6 +5,7 @@ module.exports = function (app)
 {
     app.get("/", function (request, response)
     {
+        console.log(__dirname);
         var connection = app.config.connection();
 
         connection.query("select * from noticia;", function(error, result) {
